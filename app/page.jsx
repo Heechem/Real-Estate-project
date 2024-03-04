@@ -1,16 +1,15 @@
-import Link from 'next/link';
+import Hero from '@/components/Hero';
+import HomeProperties from '@/components/HomeProperties';
+import InfoBoxes from '@/components/InfoBoxes';
+import connectDB from '@/config/database';
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
-    <div>
-      <h1 className="text-3xl text-blue-600">Welcome</h1>
-      <Link
-        href="/properties"
-        className="text-red-700 hover:bg-blue-500"
-      >
-        Show properties
-      </Link>
-    </div>
+    <>
+      <Hero />
+      <InfoBoxes />
+      <HomeProperties />
+    </>
   );
 };
 
